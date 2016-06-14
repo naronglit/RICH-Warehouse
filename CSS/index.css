@@ -1,0 +1,99 @@
+@charset "windows-874";
+@font-face {
+			font-family: "MyCustomFont";
+			src: url("supermarket.eot") ; 
+}
+@font-face {
+			font-family: "MyCustomFont";
+			src: url("supermarket.ttf") ; 
+}
+body {
+	/* [disabled]background-image: url(../Images/bg.jpg); */
+	padding: 0px;
+	font-family: MyCustomFont;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.head {
+	background-color: #2E8EC2;
+	color: #F5F5F5;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.area {
+	width: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	border: 1px solid #CCC;
+	top: 50%;
+	margin-top: -300px;
+}
+.area .body_white .botton {
+	width: 152px;
+	float: left;
+	text-align: center;
+	border: 1px solid #2E8EC2;
+	vertical-align: middle;
+	margin-left: 7px;
+}
+.area .body_white {
+	clear: both;
+	margin-top: 30px;
+}
+.area .body_white div .username {
+}
+.area .body_white .username {
+	margin-left: 80px;
+	float: left;
+	width: 80px;
+	clear: left;
+	height: 25px;
+	margin-top: 10px;
+}
+.area .body_white .user_input {
+	clear: right;
+	height: 25px;
+	margin-top: 10px;
+	float: left;
+	text-transform: uppercase;
+
+}
+.area .body_white div .btn_login {
+	text-align: center;
+}
+.area .body_white .btn_login {
+	text-align: center;
+	clear: both;
+	padding-top: 15px;
+}
+.area .body_white .place {
+	clear: both;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+.area .body_white .place .botton a {
+	background-color: #2E8EC2;
+	display: block;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #F5F5F5;
+	border: 1px dotted #CCCCCC;
+}
+.area .body_white .place .botton a:hover {
+	background-color: #25749E;
+	border: 1px dotted #CCC;
+}
+.area .body_white .user_input input {
+	width: 180px;
+}
+.area .body_white .place .txt_place {
+	text-align: center;
+}
+#view_dialog {
+	display: none;
+}

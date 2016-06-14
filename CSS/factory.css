@@ -1,0 +1,298 @@
+@charset "windows-874";
+@font-face {
+			font-family: "MyCustomFont";
+			src: url("supermarket.eot") ; 
+}
+@font-face {
+			font-family: "MyCustomFont";
+			src: url("supermarket.ttf") ; 
+}
+body {
+	/* [disabled]background-image: url(../Images/bg.jpg); */
+	margin: 0px;
+	padding: 0px;
+	font-family: MyCustomFont;
+}
+.area {
+	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+}
+.area .header {
+	background-color: #2E8EC2;
+	color: #E6E6E6;
+	height: 30px;
+	clear: left;
+	position: relative;
+	cursor: default;
+}
+.area .header .text_logout {
+	float: right;
+	width: 100px;
+	text-align: center;
+}
+.area .header .text_logout a {
+	color: #E6E6E6;
+	text-decoration: none;
+	display: block;
+	border: 1px solid #2E8EC2;
+}
+
+
+.area .header .text_logout a:hover {
+	background-color: #25749E;
+	border: 1px dotted #CCC;
+}
+
+
+.area .header .text_home {
+	float: right;
+	width: 100px;
+	text-align: center;
+}
+.area .header .text_home a {
+	color: #E6E6E6;
+	text-decoration: none;
+	display: block;
+	border: 1px solid #2E8EC2;
+}
+.area .header .text_home a:hover {
+	background-color: #25749E;
+	border: 1px dotted #CCC;
+}
+
+.area .header .text_user {
+	float: right;
+	width: 200px;
+	text-transform: uppercase;
+}
+.area .header .text_place {
+	float: left;
+	width: 250px;
+	padding-left: 10px;
+}
+.area .footer {
+	color: #E6E6E6;
+	background-color: #2E8EC2;
+	text-align: right;
+	height: 30px;
+	clear: both;
+	font-size: 15px;
+	padding-right: 10px;
+	cursor: default;
+}
+.area .data {
+	position: relative;
+}
+
+.area .data .menu{
+	float: left;
+	width: 160px;
+	background-color: #FFF;
+	font-size: 15px;
+	border: 1px dotted #CCC;
+	cursor: default;
+}
+.area .data .menu ul{
+	list-style-type: none;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+.area .data .menu ul li{
+	color: #333;
+
+}
+.area .data .menu ul li ul{
+	margin: 0px;
+	padding: 0px;
+}
+.area .data .menu ul li ul li a{
+	text-decoration: none;
+	color: #787878;
+	display: block;
+	padding-left: 10px;
+}
+.area .data .menu ul li ul li:hover {
+	background-color: #EBEBEB;
+	cursor: pointer;
+}
+.area .data .menu ul li ul li[title^="selected"] {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dotted;
+	border-right-style: none;
+	border-bottom-style: dotted;
+	border-left-style: none;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+}
+.area .data .menu ul li ul li[title^="selected"] a{
+	color: #E6E6E6;
+	/* [disabled]font-weight: bold; */
+	/* [disabled]text-decoration: underline; */
+	background-color: #2E8EC2;
+}
+.area .data .menu ul li ul div {
+	color: #787878;
+	padding-left: 40px;
+	background-image: url(../Images/arrow-ico.png);
+	background-repeat: no-repeat;
+	background-position: 10px;
+	font-size: 95%;
+}
+
+
+.area .data .body_white{
+	clear: right;
+	float: left;
+	border: 1px dotted #CCC;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.area .data .body_white .view_head{
+	float: left;
+	width: 300px;
+	font-size: 120%;
+}
+.area .data .body_white .view_head2{
+	float: right;
+	width: 300px;
+}
+.area .data .body_white .view_data{
+	clear: both;
+	padding-top: 0px;
+}
+.area .data .body_white .view_data .view_tbl {
+	cursor: default;
+}
+.area .data .body_white .view_data .view_tbl tr th {
+	font-weight: normal;
+	color: #787878;
+	text-align: left;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+}
+.area .data .body_white .view_data .view_tbl tr th:last-child {
+	text-align: right;
+}
+
+.area .data .body_white .view_data .view_tbl tr td {
+	font-weight: normal;
+	color: #787878;
+}
+.area .data .body_white .view_data .view_tbl tr:hover td {
+	background-color: #F5F5F5;
+}
+.area .data .body_white .view_data .view_tbl tr td:first-child {
+	padding-left: 5px;
+}
+
+.area .data .body_white .view_data .view_tbl tr td:last-child {
+	padding-right: 5px;
+	text-align: right;
+}
+.area .data .body_white .view_data .view_tbl .sub_tr  {
+	/* [disabled]font-size: 95%; */
+}
+
+.area .data .body_white .view_head2 .btn_export {
+	background-color: #E8E8E8;
+	border: 1px dotted #FFF;
+	font-size: 85%;
+	color: #666666;
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.area .data .body_white .view_head2 .btn_new {
+	background-color: #E8E8E8;
+	border: 1px dotted #FFFFFF;
+	font-size: 85%;
+	color: #666666;
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.area .data .body_white .view_head2 .btn_new:hover {
+	background-color: #C9C9C9;
+}
+.area .data .body_white .view_head2 .btn_export:hover {
+	background-color: #C9C9C9;
+}
+
+.area .data .body_white .view_head2 .btn_back {
+	background-color: #E8E8E8;
+	border: 1px dotted #FFFFFF;
+	font-size: 85%;
+	color: #666666;
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.area .data .body_white .view_head2 .btn_back:hover {
+	background-color: #C9C9C9;
+}
+
+.area .data .body_white .view_head2 .btn_edit {
+	background-color: #E8E8E8;
+	border: 1px dotted #FFFFFF;
+	font-size: 85%;
+	color: #666666;
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.area .data .body_white .view_head2 .btn_edit:hover {
+	background-color: #C9C9C9;
+}
+.area .data .body_white .view_data #formInput table tr td input[type=text] {
+	margin-left: 10px;
+}
+.area .data .body_white .view_data #formInput table tr td textarea {
+	margin-left: 10px;
+}
+.area .data .body_white .view_data #formInput table tr td select {
+	margin-left: 10px;
+}
+.area .data .body_white .view_data #formInput table tr td input[type= radio] {
+	margin-left: 10px;
+}
+
+
+.area .data .body_white .view_data #formInput table tr td input[type=submit] , .area .data .body_white .view_data #formInput table tr td input[type=reset] {
+	width: 65px;
+}
+
+.area .data .body_white .view_data #formInput table tr td table {
+	font-size: 95%;
+}
+.area .data .body_white .view_data #formInput table tr td table tr td input[type=text] {
+	margin: 0px;
+}
+.area .data .body_white .view_data #formInput table tr td {
+	padding-left: 10px;
+}
+.area .data .body_white .view_data #formInput table tr td table tr th {
+	font-weight: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #CCC;
+}
