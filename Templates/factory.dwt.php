@@ -62,7 +62,7 @@
         </li>
         <li>อื่นๆ
           <ul>
-            <li><a href="#">คลังสินค้า</a></li>
+            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="../web_factory/page-branch.php">คลังสินค้า</a></li>
             <li><a href="#">สูตรการผลิต</a></li>
             <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="../web_factory/page-taxation-form.php">ภาษีเข้า-ออก</a></li>
             <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="../web_factory/page-user.php">ผู้ใช้งานระบบ</a></li>

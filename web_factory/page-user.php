@@ -70,7 +70,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
         </li>
         <li>อื่นๆ
           <ul>
-            <li><a href="#">คลังสินค้า</a></li>
+            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">คลังสินค้า</a></li>
             <li><a href="#">สูตรการผลิต</a></li>
             <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">ภาษีเข้า-ออก</a></li>
             <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">ผู้ใช้งานระบบ</a></li>
