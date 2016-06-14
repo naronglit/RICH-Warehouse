@@ -62,7 +62,7 @@
         </li>
         <li>อื่นๆ
           <ul>
-            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">คลังสินค้า</a></li>
+            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="page-branch.php">คลังสินค้า</a></li>
             <li><a href="#">สูตรการผลิต</a></li>
             <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">ภาษีเข้า-ออก</a></li>
             <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">ผู้ใช้งานระบบ</a></li>
@@ -72,13 +72,31 @@
     <div class="body_white">
       <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->คลังสินค้า<!-- InstanceEndEditable --></div>
       <div class="view_head2"> <!-- InstanceBeginEditable name="view_head2" -->        <div class="btn_export">ส่งออก Excel</div>
-        <div class="btn_new">+ เพิ่มใหม่</div><!-- InstanceEndEditable --></div>
-      <div class="view_data"><!-- InstanceBeginEditable name="view_data" --><table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_tbl">
+      <div class="btn_new">+ เพิ่มใหม่</div><!-- InstanceEndEditable --></div>
+      <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->
+      <?
+	     $strSQL = "SELECT * FROM  wh_place WHERE 1=1";  
+		if($_POST["s_text1"]){
+		 $strSQL .= " AND place_id LIKE '%".$_POST["s_text1"]."%' ";  
+		}
+		if($_POST["s_text2"]){
+		 $strSQL .= " AND place LIKE '%".$_POST["s_text2"]."%' ";  
+		}
+		if($_POST["s_select1"]){
+		 $strSQL .= " AND place_type = '".$_POST["s_select1"]."' ";  
+		}
+		
+		page($_GET['page'],'15',$strSQL);				
+		$n = $Page_Start;
+		$strSQL .= " ORDER BY id ASC ".$Page_Sql;		
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());
+	  ?>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_tbl">
           <tr>
             <th>ลำดับ</th>
-            <th>User Name</th>
-            <th>Password</th>
-            <th>Permission</th>
+            <th>รหัสคลังสินค้า</th>
+            <th>ชื่อคลังสินค้า</th>
+            <th>ชื่อบริษัท</th>
             <th>หมายเหตุ</th>
             <th><? echo $change_page;   //แสดงปุ่มเลขหน้า	?></th>
           </tr>
@@ -89,10 +107,10 @@ while($objResult = mysql_fetch_array($objQuery))
 		?>      
           <tr>
             <td><?=($n+=1)."." ?></td>
-            <td><?=$objResult["user_name"]  ?></td>
-            <td><?=$objResult["password"]  ?></td>
-            <td><?=$objResult["permission"]  ?></td>
-            <td><?=$objResult["usability"]." - ".$objResult["place"]  ?></td>
+            <td><?=$objResult["place_id"]  ?></td>
+            <td><?=$objResult["place"]  ?></td>
+            <td><?=$objResult["company"]  ?></td>
+            <td><?=$objResult["place_type"]  ?></td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
           </tr>
 <?
