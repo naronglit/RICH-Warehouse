@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/factory.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>:. ∫√‘…—∑§ŸË§È“</title>
+<title>:. ‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó‡∏Ñ‡∏π‡πà‡∏Ñ‡πâ‡∏≤</title>
 <link href="../CSS/factory.css" rel="stylesheet" type="text/css" />
 <link href="../Library/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
 <script src="../Library/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
 <script src="../Library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 <script type="text/javascript" src="../Library/reload.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
-				$(".btn_new").click(function(){  //‡æ‘Ë¡¢ÈÕ¡Ÿ≈
+$(document).ready(function(){ //‡πÄ‡∏°‡∏∑‡πà‡∏≠‡πÇ‡∏´‡∏•‡∏î‡πÄ‡∏û‡πá‡∏à‡πÄ‡∏™‡∏£‡πá‡∏à
+				$(".btn_new").click(function(){  //‡πÄ‡∏û‡∏¥‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•
 						window.location='page-supplier-form.php?act=add';
 				});
 
@@ -28,107 +28,107 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
   <div class="header">
     <div class="text_place">: <?=$_SESSION['session_user']['place_name'] ?></div>
   <div class="text_logout"><a href="../process-login?act=page_logout">Logout</a></div>
-    <div class="text_home"><a href="../index.php">°≈—∫ÀπÈ“À≈—°</a></div>
-    <div class="text_user">ºŸÈ„™Èß“π : <?=$_SESSION['session_user']['user_name'] ?></div>
+    <div class="text_home"><a href="../index.php">‡∏Å‡∏•‡∏±‡∏ö‡∏´‡∏ô‡πâ‡∏≤‡∏´‡∏•‡∏±‡∏Å</a></div>
+    <div class="text_user">‡∏ú‡∏π‡πâ‡πÉ‡∏ä‡πâ‡∏á‡∏≤‡∏ô : <?=$_SESSION['session_user']['user_name'] ?></div>
     
   </div>
   <div class="data">
     <div class="menu">
       <ul>
-        <li>¢ÈÕ¡Ÿ≈ ‘π§È“        
+        <li>‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤        
           <ul>
-            <li <?=selectedMenu(array("page-product1.php","page-product1-form.php")) ?>><a href="page-product1.php">‡À≈Á°¡È«π</a></li>
-            <li <?=selectedMenu(array("page-product2.php","page-product2-form.php")) ?>><a href="page-product2.php">‡À≈Á° ≈‘µ</a></li>
-            <li <?=selectedMenu(array("page-product3.php","page-product3-form.php")) ?>><a href="page-product3.php">‡À≈Á°·ª√√Ÿª</a></li>
+            <li <?=selectedMenu(array("page-product1.php","page-product1-form.php")) ?>><a href="page-product1.php">‡πÄ‡∏´‡∏•‡πá‡∏Å‡∏°‡πâ‡∏ß‡∏ô</a></li>
+            <li <?=selectedMenu(array("page-product2.php","page-product2-form.php")) ?>><a href="page-product2.php">‡πÄ‡∏´‡∏•‡πá‡∏Å‡∏™‡∏•‡∏¥‡∏ï</a></li>
+            <li <?=selectedMenu(array("page-product3.php","page-product3-form.php")) ?>><a href="page-product3.php">‡πÄ‡∏´‡∏•‡πá‡∏Å‡πÅ‡∏õ‡∏£‡∏£‡∏π‡∏õ</a></li>
           </ul>
         </li>
-        <li>√—∫«—µ∂ÿ¥‘∫
+        <li>‡∏£‡∏±‡∏ö‡∏ß‡∏±‡∏ï‡∏ñ‡∏∏‡∏î‡∏¥‡∏ö
           <ul>
-            <li <?=selectedMenu(array("page-receivePlan.php","page-receivePlan-form.php")) ?>><a href="page-receivePlan.php">·ºπ√—∫«—µ∂ÿ¥‘∫</a></li>
-            <li <?=selectedMenu(array("page-receive.php","page-receive-form.php")) ?>><a href="page-receive.php">√—∫«—µ∂ÿ¥‘∫‡¢È“§≈—ß</a></li>
-            <li><a href="#">§ß‡À≈◊Õ</a></li>
+            <li <?=selectedMenu(array("page-receivePlan.php","page-receivePlan-form.php")) ?>><a href="page-receivePlan.php">‡πÅ‡∏ú‡∏ô‡∏£‡∏±‡∏ö‡∏ß‡∏±‡∏ï‡∏ñ‡∏∏‡∏î‡∏¥‡∏ö</a></li>
+            <li <?=selectedMenu(array("page-receive.php","page-receive-form.php")) ?>><a href="page-receive.php">‡∏£‡∏±‡∏ö‡∏ß‡∏±‡∏ï‡∏ñ‡∏∏‡∏î‡∏¥‡∏ö‡πÄ‡∏Ç‡πâ‡∏≤‡∏Ñ‡∏•‡∏±‡∏á</a></li>
+            <li><a href="#">‡∏Ñ‡∏á‡πÄ‡∏´‡∏•‡∏∑‡∏≠</a></li>
           </ul>
         </li>
-        <li>·ª√√Ÿª ‘π§È“
+        <li>‡πÅ‡∏õ‡∏£‡∏£‡∏π‡∏õ‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤
           <ul>
-            <li <?=selectedMenu(array("page-process1.php","page-process1-form.php")) ?>><a href="page-process1.php"> —Ëßµ—¥‡À≈Á°</a></li>
-            <li <?=selectedMenu(array("page-process2.php","page-process2-form.php")) ?>><a href="page-process2.php">º≈‘µ ‘π§È“</a></li>
-            <li <?=selectedMenu(array("page-process3.php","page-process3-form.php")) ?>><a href="page-process3.php">·æÁ§ ‘π§È“</a></li>
+            <li <?=selectedMenu(array("page-process1.php","page-process1-form.php")) ?>><a href="page-process1.php">‡∏™‡∏±‡πà‡∏á‡∏ï‡∏±‡∏î‡πÄ‡∏´‡∏•‡πá‡∏Å</a></li>
+            <li <?=selectedMenu(array("page-process2.php","page-process2-form.php")) ?>><a href="page-process2.php">‡∏ú‡∏•‡∏¥‡∏ï‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</a></li>
+            <li <?=selectedMenu(array("page-process3.php","page-process3-form.php")) ?>><a href="page-process3.php">‡πÅ‡∏û‡πá‡∏Ñ‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</a></li>
           </ul>
         </li>
-        <li>¢—ÈπµÕπ¢π Ëß            
+        <li>‡∏Ç‡∏±‡πâ‡∏ô‡∏ï‡∏≠‡∏ô‡∏Ç‡∏ô‡∏™‡πà‡∏á            
           <ul>
-            <li><a href="#">·ºπ°“√®Ë“¬ ‘π§È“</a></li>
-            <li><a href="#">®Ë“¬ ‘π§È“ÕÕ°</a></li>
-            <li><a href="#">§ß‡À≈◊Õ</a></li>
+            <li><a href="#">‡πÅ‡∏ú‡∏ô‡∏Å‡∏≤‡∏£‡∏à‡πà‡∏≤‡∏¢‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</a></li>
+            <li><a href="#">‡∏à‡πà‡∏≤‡∏¢‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤‡∏≠‡∏≠‡∏Å</a></li>
+            <li><a href="#">‡∏Ñ‡∏á‡πÄ‡∏´‡∏•‡∏∑‡∏≠</a></li>
           </ul>
         </li>
-        <li>∫√‘…—∑§ŸË§È“            
+        <li>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó‡∏Ñ‡∏π‡πà‡∏Ñ‡πâ‡∏≤            
           <ul>
-            <li <?=selectedMenu(array("page-supplier.php","page-supplier-form.php")) ?>><a href="page-supplier.php">¢ÈÕ¡Ÿ≈§ŸË§È“</a></li>
+            <li <?=selectedMenu(array("page-supplier.php","page-supplier-form.php")) ?>><a href="page-supplier.php">‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡∏Ñ‡∏π‡πà‡∏Ñ‡πâ‡∏≤</a></li>
           </ul>
         </li>
-        <li>Õ◊ËπÊ
+        <li>‡∏≠‡∏∑‡πà‡∏ô‡πÜ
           <ul>
-            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="page-branch.php">§≈—ß ‘π§È“</a></li>
-            <li><a href="#"> Ÿµ√°“√º≈‘µ</a></li>
-            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">¿“…’‡¢È“-ÕÕ°</a></li>
-            <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">ºŸÈ„™Èß“π√–∫∫</a></li>
+            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="page-branch.php">‡∏Ñ‡∏•‡∏±‡∏á‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</a></li>
+            <li><a href="#">‡∏™‡∏π‡∏ï‡∏£‡∏Å‡∏≤‡∏£‡∏ú‡∏•‡∏¥‡∏ï</a></li>
+            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">‡∏†‡∏≤‡∏©‡∏µ‡πÄ‡∏Ç‡πâ‡∏≤-‡∏≠‡∏≠‡∏Å</a></li>
+            <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">‡∏ú‡∏π‡πâ‡πÉ‡∏ä‡πâ‡∏á‡∏≤‡∏ô‡∏£‡∏∞‡∏ö‡∏ö</a></li>
           </ul>
         </li>
   </ul></div>
     <div class="body_white">
-      <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->∫√‘…—∑§ŸË§È“<!-- InstanceEndEditable --></div>
+      <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó‡∏Ñ‡∏π‡πà‡∏Ñ‡πâ‡∏≤<!-- InstanceEndEditable --></div>
       <div class="view_head2"> <!-- InstanceBeginEditable name="view_head2" -->
-        <div class="btn_export"> ËßÕÕ° Excel</div>
-        <div class="btn_new">+ ‡æ‘Ë¡„À¡Ë</div>
+        <div class="btn_export">‡∏™‡πà‡∏á‡∏≠‡∏≠‡∏Å Excel</div>
+        <div class="btn_new">+ ‡πÄ‡∏û‡∏¥‡πà‡∏°‡πÉ‡∏´‡∏°‡πà</div>
       <!-- InstanceEndEditable --></div>
       <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->      
       <form id="form1" name="form1" method="post" action="">
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_tbl">
           <tr>
-            <th>≈”¥—∫</th>
-            <th>À¡“¬‡≈¢§ŸË§È“</th>
-            <th>™◊ËÕ∫√‘…—∑</th>
-            <th>ºŸÈµ‘¥µËÕ</th>
-            <th>‡∫Õ√Ï‚∑√</th>
+            <th>‡∏•‡∏≥‡∏î‡∏±‡∏ö</th>
+            <th>‡∏´‡∏°‡∏≤‡∏¢‡πÄ‡∏•‡∏Ç‡∏Ñ‡∏π‡πà‡∏Ñ‡πâ‡∏≤</th>
+            <th>‡∏ä‡∏∑‡πà‡∏≠‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó</th>
+            <th>‡∏ú‡∏π‡πâ‡∏ï‡∏¥‡∏î‡∏ï‡πà‡∏≠</th>
+            <th>‡πÄ‡∏ö‡∏≠‡∏£‡πå‡πÇ‡∏ó‡∏£</th>
             <th>
-              <label for="select">‰ªÀπÈ“</label>
+              <label for="select">‡πÑ‡∏õ‡∏´‡∏ô‡πâ‡∏≤</label>
               <select name="select" id="select">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 </select>
-              ®“° 8 ÀπÈ“</th>
+              ‡∏à‡∏≤‡∏Å 8 ‡∏´‡∏ô‡πâ‡∏≤</th>
           </tr>
           <tr>
             <td>1</td>
             <td>SUP0000001</td>
-            <td>∫√‘…—∑  “¡™—¬ µ’≈ ®”°—¥</td>
-            <td>§ÿ≥™—¬»—°¥‘Ï</td>
+            <td>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó ‡∏™‡∏≤‡∏°‡∏ä‡∏±‡∏¢‡∏™‡∏ï‡∏µ‡∏• ‡∏à‡∏≥‡∏Å‡∏±‡∏î</td>
+            <td>‡∏Ñ‡∏∏‡∏ì‡∏ä‡∏±‡∏¢‡∏®‡∏±‡∏Å‡∏î‡∏¥‡πå</td>
             <td>0-3483-4531</td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
           </tr>
           <tr>
             <td>2</td>
             <td>SUP0000002</td>
-            <td>∫√‘…—∑ ∑Õß‰∑¬ ‡¡∑Õ≈ ‡∑√¥¥‘Èß ®”°—¥</td>
-            <td>§ÿ≥πæ√—µπÏ</td>
+            <td>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó ‡∏ó‡∏≠‡∏á‡πÑ‡∏ó‡∏¢ ‡πÄ‡∏°‡∏ó‡∏≠‡∏• ‡πÄ‡∏ó‡∏£‡∏î‡∏î‡∏¥‡πâ‡∏á ‡∏à‡∏≥‡∏Å‡∏±‡∏î</td>
+            <td>‡∏Ñ‡∏∏‡∏ì‡∏ô‡∏û‡∏£‡∏±‡∏ï‡∏ô‡πå</td>
             <td>0-3866-8828</td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
           </tr>
           <tr>
             <td>3</td>
             <td>SUP0000003</td>
-            <td>∫√‘…—∑ ‡§.∑’.‡ÕÁ¡  µ’≈ ®”°—¥</td>
-            <td>§ÿ≥¥«ßæ√</td>
+            <td>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó ‡πÄ‡∏Ñ.‡∏ó‡∏µ.‡πÄ‡∏≠‡πá‡∏° ‡∏™‡∏ï‡∏µ‡∏• ‡∏à‡∏≥‡∏Å‡∏±‡∏î</td>
+            <td>‡∏Ñ‡∏∏‡∏ì‡∏î‡∏ß‡∏á‡∏û‡∏£</td>
             <td>044-206133-39</td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
           </tr>
           <tr>
             <td>4</td>
             <td>SUP0000004</td>
-            <td>∫√‘…—∑ ™—¬™π–  µ’≈ ®”°—¥</td>
+            <td>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó ‡∏ä‡∏±‡∏¢‡∏ä‡∏ô‡∏∞ ‡∏™‡∏ï‡∏µ‡∏• ‡∏à‡∏≥‡∏Å‡∏±‡∏î</td>
             <td>&nbsp;</td>
             <td>0-2689-3650</td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
@@ -136,7 +136,7 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
           <tr>
             <td>5</td>
             <td>SUP0000005</td>
-            <td>∫√‘…—∑ ¥’ ‘π™—¬ µ’≈ ®”°—¥</td>
+            <td>‡∏ö‡∏£‡∏¥‡∏©‡∏±‡∏ó ‡∏î‡∏µ‡∏™‡∏¥‡∏ô‡∏ä‡∏±‡∏¢‡∏™‡∏ï‡∏µ‡∏• ‡∏à‡∏≥‡∏Å‡∏±‡∏î</td>
             <td>&nbsp;</td>
             <td>0-2689-1988</td>
             <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
@@ -204,7 +204,7 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
     </div>
   </div>
   
-  <div class="footer"> ß«π≈‘¢ ‘∑∏‘Ï 2015. RICH ASIA Group.</div>
+  <div class="footer">‡∏™‡∏á‡∏ß‡∏ô‡∏•‡∏¥‡∏Ç‡∏™‡∏¥‡∏ó‡∏ò‡∏¥‡πå 2015. RICH ASIA Group.</div>
 </div>
 </body>
 <!-- InstanceEnd --></html>

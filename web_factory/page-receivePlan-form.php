@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/factory.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>:. แผนรับวัตถุดิบ</title>
+<title>:. เนเธเธเธฃเธฑเธเธงเธฑเธ•เธ–เธธเธ”เธดเธ</title>
 <link href="../CSS/factory.css" rel="stylesheet" type="text/css" />
 <link href="../Library/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
 <script src="../Library/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
 <script src="../Library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 <script type="text/javascript" src="../Library/reload.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
-				$(".btn_back").click(function(){  //กลับ
+$(document).ready(function(){ //เน€เธกเธทเนเธญเนเธซเธฅเธ”เน€เธเนเธเน€เธชเธฃเนเธ
+				$(".btn_back").click(function(){  //เธเธฅเธฑเธ
 						window.location='page-receivePlan.php';
 				});
 
@@ -28,60 +28,60 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
   <div class="header">
     <div class="text_place">: <?=$_SESSION['session_user']['place_name'] ?></div>
   <div class="text_logout"><a href="../process-login?act=page_logout">Logout</a></div>
-    <div class="text_home"><a href="../index.php">กลับหน้าหลัก</a></div>
-    <div class="text_user">ผู้ใช้งาน : <?=$_SESSION['session_user']['user_name'] ?></div>
+    <div class="text_home"><a href="../index.php">เธเธฅเธฑเธเธซเธเนเธฒเธซเธฅเธฑเธ</a></div>
+    <div class="text_user">เธเธนเนเนเธเนเธเธฒเธ : <?=$_SESSION['session_user']['user_name'] ?></div>
     
   </div>
   <div class="data">
     <div class="menu">
       <ul>
-        <li>ข้อมูลสินค้า        
+        <li>เธเนเธญเธกเธนเธฅเธชเธดเธเธเนเธฒ        
           <ul>
-            <li <?=selectedMenu(array("page-product1.php","page-product1-form.php")) ?>><a href="page-product1.php">เหล็กม้วน</a></li>
-            <li <?=selectedMenu(array("page-product2.php","page-product2-form.php")) ?>><a href="page-product2.php">เหล็กสลิต</a></li>
-            <li <?=selectedMenu(array("page-product3.php","page-product3-form.php")) ?>><a href="page-product3.php">เหล็กแปรรูป</a></li>
+            <li <?=selectedMenu(array("page-product1.php","page-product1-form.php")) ?>><a href="page-product1.php">เน€เธซเธฅเนเธเธกเนเธงเธ</a></li>
+            <li <?=selectedMenu(array("page-product2.php","page-product2-form.php")) ?>><a href="page-product2.php">เน€เธซเธฅเนเธเธชเธฅเธดเธ•</a></li>
+            <li <?=selectedMenu(array("page-product3.php","page-product3-form.php")) ?>><a href="page-product3.php">เน€เธซเธฅเนเธเนเธเธฃเธฃเธนเธ</a></li>
           </ul>
         </li>
-        <li>รับวัตถุดิบ
+        <li>เธฃเธฑเธเธงเธฑเธ•เธ–เธธเธ”เธดเธ
           <ul>
-            <li <?=selectedMenu(array("page-receivePlan.php","page-receivePlan-form.php")) ?>><a href="page-receivePlan.php">แผนรับวัตถุดิบ</a></li>
-            <li <?=selectedMenu(array("page-receive.php","page-receive-form.php")) ?>><a href="page-receive.php">รับวัตถุดิบเข้าคลัง</a></li>
-            <li><a href="#">คงเหลือ</a></li>
+            <li <?=selectedMenu(array("page-receivePlan.php","page-receivePlan-form.php")) ?>><a href="page-receivePlan.php">เนเธเธเธฃเธฑเธเธงเธฑเธ•เธ–เธธเธ”เธดเธ</a></li>
+            <li <?=selectedMenu(array("page-receive.php","page-receive-form.php")) ?>><a href="page-receive.php">เธฃเธฑเธเธงเธฑเธ•เธ–เธธเธ”เธดเธเน€เธเนเธฒเธเธฅเธฑเธ</a></li>
+            <li><a href="#">เธเธเน€เธซเธฅเธทเธญ</a></li>
           </ul>
         </li>
-        <li>แปรรูปสินค้า
+        <li>เนเธเธฃเธฃเธนเธเธชเธดเธเธเนเธฒ
           <ul>
-            <li <?=selectedMenu(array("page-process1.php","page-process1-form.php")) ?>><a href="page-process1.php">สั่งตัดเหล็ก</a></li>
-            <li <?=selectedMenu(array("page-process2.php","page-process2-form.php")) ?>><a href="page-process2.php">ผลิตสินค้า</a></li>
-            <li <?=selectedMenu(array("page-process3.php","page-process3-form.php")) ?>><a href="page-process3.php">แพ็คสินค้า</a></li>
+            <li <?=selectedMenu(array("page-process1.php","page-process1-form.php")) ?>><a href="page-process1.php">เธชเธฑเนเธเธ•เธฑเธ”เน€เธซเธฅเนเธ</a></li>
+            <li <?=selectedMenu(array("page-process2.php","page-process2-form.php")) ?>><a href="page-process2.php">เธเธฅเธดเธ•เธชเธดเธเธเนเธฒ</a></li>
+            <li <?=selectedMenu(array("page-process3.php","page-process3-form.php")) ?>><a href="page-process3.php">เนเธเนเธเธชเธดเธเธเนเธฒ</a></li>
           </ul>
         </li>
-        <li>ขั้นตอนขนส่ง            
+        <li>เธเธฑเนเธเธ•เธญเธเธเธเธชเนเธ            
           <ul>
-            <li><a href="#">แผนการจ่ายสินค้า</a></li>
-            <li><a href="#">จ่ายสินค้าออก</a></li>
-            <li><a href="#">คงเหลือ</a></li>
+            <li><a href="#">เนเธเธเธเธฒเธฃเธเนเธฒเธขเธชเธดเธเธเนเธฒ</a></li>
+            <li><a href="#">เธเนเธฒเธขเธชเธดเธเธเนเธฒเธญเธญเธ</a></li>
+            <li><a href="#">เธเธเน€เธซเธฅเธทเธญ</a></li>
           </ul>
         </li>
-        <li>บริษัทคู่ค้า            
+        <li>เธเธฃเธดเธฉเธฑเธ—เธเธนเนเธเนเธฒ            
           <ul>
-            <li <?=selectedMenu(array("page-supplier.php","page-supplier-form.php")) ?>><a href="page-supplier.php">ข้อมูลคู่ค้า</a></li>
+            <li <?=selectedMenu(array("page-supplier.php","page-supplier-form.php")) ?>><a href="page-supplier.php">เธเนเธญเธกเธนเธฅเธเธนเนเธเนเธฒ</a></li>
           </ul>
         </li>
-        <li>อื่นๆ
+        <li>เธญเธทเนเธเน
           <ul>
-            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="page-branch.php">คลังสินค้า</a></li>
-            <li><a href="#">สูตรการผลิต</a></li>
-            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">ภาษีเข้า-ออก</a></li>
-            <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">ผู้ใช้งานระบบ</a></li>
+            <li <?=selectedMenu(array("page-branch.php","page-branch-form.php")) ?>><a href="page-branch.php">เธเธฅเธฑเธเธชเธดเธเธเนเธฒ</a></li>
+            <li><a href="#">เธชเธนเธ•เธฃเธเธฒเธฃเธเธฅเธดเธ•</a></li>
+            <li <?=selectedMenu(array("","page-taxation-form.php")) ?>><a href="page-taxation-form.php">เธ เธฒเธฉเธตเน€เธเนเธฒ-เธญเธญเธ</a></li>
+            <li <?=selectedMenu(array("page-user.php","page-user-form.php")) ?>><a href="page-user.php">เธเธนเนเนเธเนเธเธฒเธเธฃเธฐเธเธ</a></li>
           </ul>
         </li>
   </ul></div>
     <div class="body_white">
-      <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->แผนรับวัตถุดิบ<!-- InstanceEndEditable --></div>
+      <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->เนเธเธเธฃเธฑเธเธงเธฑเธ•เธ–เธธเธ”เธดเธ<!-- InstanceEndEditable --></div>
       <div class="view_head2"> <!-- InstanceBeginEditable name="view_head2" -->
-        <div class="btn_back">กลับไปหน้าข้อมูล</div>
-        <div class="btn_edit">แก้ไขข้อมูลนี้</div>
+        <div class="btn_back">เธเธฅเธฑเธเนเธเธซเธเนเธฒเธเนเธญเธกเธนเธฅ</div>
+        <div class="btn_edit">เนเธเนเนเธเธเนเธญเธกเธนเธฅเธเธตเน</div>
       <!-- InstanceEndEditable --></div>
       <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->
         <form id="formInput" name="formInput" method="post" action=""><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -92,26 +92,26 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">กำหนดหมายเลขแผน :</td>
+    <td align="right">เธเธณเธซเธเธ”เธซเธกเธฒเธขเน€เธฅเธเนเธเธ :</td>
     <td><label for="textfield6"></label>
       <input name="textfield6" type="text" id="textfield6" size="25" /></td>
     <td align="right">&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">วันที่กำหนดรับ :</td>
+    <td align="right">เธงเธฑเธเธ—เธตเนเธเธณเธซเธเธ”เธฃเธฑเธ :</td>
     <td><label for="textfield"></label>
       <input name="textfield" type="text" id="textfield" size="15" /></td>
-    <td align="right">หมายเหตุ :</td>
+    <td align="right">เธซเธกเธฒเธขเน€เธซเธ•เธธ :</td>
     <td rowspan="2"><label for="textfield3">
       <textarea name="textarea" id="textarea" cols="35" rows="3"></textarea>
     </label></td>
   </tr>
   <tr>
-    <td align="right">บริษัทคู่ค้า :</td>
+    <td align="right">เธเธฃเธดเธฉเธฑเธ—เธเธนเนเธเนเธฒ :</td>
     <td><label for="textfield2"></label>
       <input name="textfield5" type="text" id="textfield2" size="25" /> 
-      <a href="#">เลือก</a></td>
+      <a href="#">เน€เธฅเธทเธญเธ</a></td>
     <td align="right">&nbsp;</td>
   </tr>
   <tr>
@@ -121,29 +121,29 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="4" align="center">รายละเอียดสินค้าในแผน</td>
+    <td colspan="4" align="center">เธฃเธฒเธขเธฅเธฐเน€เธญเธตเธขเธ”เธชเธดเธเธเนเธฒเนเธเนเธเธ</td>
     </tr>
   <tr>
     <td colspan="4"><table width="100%" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <th>รหัสสินค้า</th>
-        <th>สินค้า</th>
-        <th align="right">จำนวนรับ(ม้วน)</th>
-        <th align="right"><a href="#">เพิ่มสินค้า</a></th>
+        <th>เธฃเธซเธฑเธชเธชเธดเธเธเนเธฒ</th>
+        <th>เธชเธดเธเธเนเธฒ</th>
+        <th align="right">เธเธณเธเธงเธเธฃเธฑเธ(เธกเนเธงเธ)</th>
+        <th align="right"><a href="#">เน€เธเธดเนเธกเธชเธดเธเธเนเธฒ</a></th>
         </tr>
       <tr>
         <td>RM1101701219 </td>
-        <td>เหล็กม้วนดำ 1.70 x 1219 MM. </td>
+        <td>เน€เธซเธฅเนเธเธกเนเธงเธเธ”เธณ 1.70 x 1219 MM. </td>
         <td align="right"><label for="textfield9"></label>
           <input name="textfield8" type="text" id="textfield9" value="1" size="10" /></td>
-        <td align="right"><label for="textfield14"><a href="#">ลบรายการนี้</a></label></td>
+        <td align="right"><label for="textfield14"><a href="#">เธฅเธเธฃเธฒเธขเธเธฒเธฃเธเธตเน</a></label></td>
         </tr>
       <tr>
         <td>RM1101901219</td>
-        <td>เหล็กม้วนดำ 1.90 x 1219 MM. </td>
+        <td>เน€เธซเธฅเนเธเธกเนเธงเธเธ”เธณ 1.90 x 1219 MM. </td>
         <td align="right"><label for="textfield13"></label>
           <input name="textfield9" type="text" id="textfield13" value="1" size="10" /></td>
-        <td align="right"><label for="textfield15"><a href="#">ลบรายการนี้</a></label></td>
+        <td align="right"><label for="textfield15"><a href="#">เธฅเธเธฃเธฒเธขเธเธฒเธฃเธเธตเน</a></label></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -161,7 +161,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="4" align="center"><input type="submit" name="Submit" id="button" value=" บันทึก " /> <input type="reset" name="button2" id="button2" value=" ยกลิก " /></td>
+    <td colspan="4" align="center"><input type="submit" name="Submit" id="button" value=" เธเธฑเธเธ—เธถเธ " /> <input type="reset" name="button2" id="button2" value=" เธขเธเธฅเธดเธ " /></td>
     </tr>
   <tr>
     <td align="right">&nbsp;</td>
@@ -200,7 +200,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
     </div>
   </div>
   
-  <div class="footer">สงวนลิขสิทธิ์ 2015. RICH ASIA Group.</div>
+  <div class="footer">เธชเธเธงเธเธฅเธดเธเธชเธดเธ—เธเธดเน 2015. RICH ASIA Group.</div>
 </div>
 </body>
 <!-- InstanceEnd --></html>
