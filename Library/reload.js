@@ -1,11 +1,11 @@
-$(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®	
+$(document).ready(function(){ //‡πÄ‡∏°‡∏∑‡πà‡∏≠‡πÇ‡∏´‡∏•‡∏î‡πÄ‡∏û‡πá‡∏à‡πÄ‡∏™‡∏£‡πá‡∏à	
 
-					$( window ).resize(function() { //‡¡◊ËÕ resize browser
+					$( window ).resize(function() { //‡πÄ‡∏°‡∏∑‡πà‡∏≠ resize browser
 						BodyResize();
 					});
 						BodyResize();	
 						
-					$(".area .data .menu ul li ul li[title='selected-sub']").after("<div> (‡æ‘Ë¡¢ÈÕ¡Ÿ≈) </div>") //· ¥ß¢ÈÕ§«“¡¥È“π≈Ë“ß‡¡πŸ∑’Ë∂Ÿ° ‰Œ‰≈ °√≥’∑’Ë¡’°“√‡æ‘Ë¡ ·°È‰¢
+					$(".area .data .menu ul li ul li[title='selected-sub']").after("<div> (‡πÄ‡∏û‡∏¥‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•) </div>") //‡πÅ‡∏™‡∏î‡∏á‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°‡∏î‡πâ‡∏≤‡∏ô‡∏•‡πà‡∏≤‡∏á‡πÄ‡∏°‡∏ô‡∏π‡∏ó‡∏µ‡πà‡∏ñ‡∏π‡∏Å ‡πÑ‡∏Æ‡πÑ‡∏• ‡∏Å‡∏£‡∏ì‡∏µ‡∏ó‡∏µ‡πà‡∏°‡∏µ‡∏Å‡∏≤‡∏£‡πÄ‡∏û‡∏¥‡πà‡∏° ‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç
 /*					$('.area .data .menu ul li ul div').effect('fade',0);
 					$('.area .data .menu ul li ul div').fadeIn();*/
 /*						setInterval(function() {
@@ -14,19 +14,19 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
 											}, 2000);*/
 });
 
-function BodyResize(){ // ¢¬“¬§«“¡°«È“µ“¡ÀπÈ“®Õ
+function BodyResize(){ // ‡∏Ç‡∏¢‡∏≤‡∏¢‡∏Ñ‡∏ß‡∏≤‡∏°‡∏Å‡∏ß‡πâ‡∏≤‡∏ï‡∏≤‡∏°‡∏´‡∏ô‡πâ‡∏≤‡∏à‡∏≠
 			screen_width = $(window).width();
 			screen_height = $(window).height();
 			menu_height = $(".area .data .menu").height();
 			//bodyWhite_height = $(".area .data .body_white").height();
 			
-						$(".area .data .body_white").css("width", (screen_width-184)+"px");//ª√—∫§«“¡°«È“ß
-						//$(".area .data .body_white").css("min-height", (screen_height-63)+"px");//ª√—∫§«“¡ Ÿß	
+						$(".area .data .body_white").css("width", (screen_width-184)+"px");//‡∏õ‡∏£‡∏±‡∏ö‡∏Ñ‡∏ß‡∏≤‡∏°‡∏Å‡∏ß‡πâ‡∏≤‡∏á
+						//$(".area .data .body_white").css("min-height", (screen_height-63)+"px");//‡∏õ‡∏£‡∏±‡∏ö‡∏Ñ‡∏ß‡∏≤‡∏°‡∏™‡∏π‡∏á	
 						
-						if(menu_height >  (screen_height-64)){ //‡¡πŸ  Ÿß°«Ë“
-							$(".area .data .body_white").css("min-height", menu_height+"px");//ª√—∫§«“¡ Ÿß								
+						if(menu_height >  (screen_height-64)){ //‡πÄ‡∏°‡∏ô‡∏π ‡∏™‡∏π‡∏á‡∏Å‡∏ß‡πà‡∏≤
+							$(".area .data .body_white").css("min-height", menu_height+"px");//‡∏õ‡∏£‡∏±‡∏ö‡∏Ñ‡∏ß‡∏≤‡∏°‡∏™‡∏π‡∏á								
 						}else{					
-							$(".area .data .body_white").css("min-height", (screen_height-64)+"px");//ª√—∫§«“¡ Ÿß	
+							$(".area .data .body_white").css("min-height", (screen_height-64)+"px");//‡∏õ‡∏£‡∏±‡∏ö‡∏Ñ‡∏ß‡∏≤‡∏°‡∏™‡∏π‡∏á	
 						}
 }
 
