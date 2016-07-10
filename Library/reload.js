@@ -5,7 +5,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
 					});
 						BodyResize();	
 						
-					$(".area .data .menu ul li ul li[title='selected-sub']").after("<div> (เพิ่มข้อมูล) </div>") //แสดงข้อความด้านล่างเมนูที่ถูก ไฮไล กรณีที่มีการเพิ่ม แก้ไข
+					$(".area .data .menu ul li ul li[title='selected-sub']").after("<div> กำลังเพิ่มข้อมูล </div>") //แสดงข้อความด้านล่างเมนูที่ถูก ไฮไล กรณีที่มีการเพิ่ม แก้ไข
 /*					$('.area .data .menu ul li ul div').effect('fade',0);
 					$('.area .data .menu ul li ul div').fadeIn();*/
 /*						setInterval(function() {
