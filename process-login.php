@@ -6,16 +6,16 @@
 				$d = mysql_fetch_array($data);
 				if($d <> ""){
 						$_SESSION['session_user'] = array("user_name"=>$d['user_name']  ,  "permission"=>$d['permission']  ,  "usability"=>$d['usability']  ,  "place_name"=>$d['place']   , "place_id" =>$d['place_id'] );
-						print "<script language='javascript'>window.parent.msg_complete('Login  ”‡√Á®','Login ‡√’¬∫√ÈÕ¬·≈È«. ‚ª√¥‡≈◊Õ°∑’Ë∑”°“√');</script>";		  exit();	
+						print "<script language='javascript'>window.parent.msg_complete('Login ‡∏™‡∏≥‡πÄ‡∏£‡πá‡∏à','Login ‡πÄ‡∏£‡∏µ‡∏¢‡∏ö‡∏£‡πâ‡∏≠‡∏¢‡πÅ‡∏•‡πâ‡∏ß. ‡πÇ‡∏õ‡∏£‡∏î‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡∏ó‡∏µ‡πà‡∏ó‡∏≥‡∏Å‡∏≤‡∏£');</script>";		  exit();	
 				}else{
-						print "<script language='javascript'>window.parent.msg_error('·®Èß‡µ◊Õπ','Username À√◊Õ Password ‰¡Ë∂Ÿ°µÈÕß °√ÿ≥“≈Õß„À¡Ë');</script>";		  exit();	
+						print "<script language='javascript'>window.parent.msg_error('‡πÅ‡∏à‡πâ‡∏á‡πÄ‡∏ï‡∏∑‡∏≠‡∏ô','Username ‡∏´‡∏£‡∏∑‡∏≠ Password ‡πÑ‡∏°‡πà‡∏ñ‡∏π‡∏Å‡∏ï‡πâ‡∏≠‡∏á ‡∏Å‡∏£‡∏∏‡∏ì‡∏≤‡∏•‡∏≠‡∏á‡πÉ‡∏´‡∏°‡πà');</script>";		  exit();	
 				}
 		
 		}/*else if( $_GET['act'] == "logout" ){
 				session_destroy(); 
-				print "<script language='javascript'>window.parent.msg_complete('Logout  ”‡√Á®','∑”°“√ Logout ‡√’¬∫√ÈÕ¬·≈È«. °¥ªÿË¡ÕÕ°À√◊Õª‘¥‚ª√·°√¡');</script>";		  exit();	
+				print "<script language='javascript'>window.parent.msg_complete('Logout ‡∏™‡∏≥‡πÄ‡∏£‡πá‡∏à','‡∏ó‡∏≥‡∏Å‡∏≤‡∏£ Logout ‡πÄ‡∏£‡∏µ‡∏¢‡∏ö‡∏£‡πâ‡∏≠‡∏¢‡πÅ‡∏•‡πâ‡∏ß. ‡∏Å‡∏î‡∏õ‡∏∏‡πà‡∏°‡∏≠‡∏≠‡∏Å‡∏´‡∏£‡∏∑‡∏≠‡∏õ‡∏¥‡∏î‡πÇ‡∏õ‡∏£‡πÅ‡∏Å‡∏£‡∏°');</script>";		  exit();	
 				exit();
-		}*/else if( $_GET['act'] == "page_logout" ){ //logout ®“° page Õ◊ËπÊ
+		}*/else if( $_GET['act'] == "page_logout" ){ //logout ‡∏à‡∏≤‡∏Å page ‡∏≠‡∏∑‡πà‡∏ô‡πÜ
 				session_destroy(); 
 				print "<script language='javascript'>window.location='index.php?act=page_logout';</script>";		  exit();	
 				exit();

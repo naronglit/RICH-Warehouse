@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
-<title>Login √–∫∫®—¥°“√§≈—ß ‘π§È“∑—≥±Ï∫πœ </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login ‡∏£‡∏∞‡∏ö‡∏ö‡∏à‡∏±‡∏î‡∏Å‡∏≤‡∏£‡∏Ñ‡∏•‡∏±‡∏á‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤‡∏ó‡∏±‡∏ì‡∏ë‡πå‡∏ö‡∏ô‡∏Ø </title>
 <link href="CSS/index.css" rel="stylesheet" type="text/css" />
 <link href="Library/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
 <script src="Library/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
@@ -11,33 +11,33 @@
 <script type="text/javascript" src="Library/reload.js"></script>
 <script type="text/javascript">
 
-$(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
-				$("#txtUser").focus(function(){ //∂È“ focus
+$(document).ready(function(){ //‡πÄ‡∏°‡∏∑‡πà‡∏≠‡πÇ‡∏´‡∏•‡∏î‡πÄ‡∏û‡πá‡∏à‡πÄ‡∏™‡∏£‡πá‡∏à
+				$("#txtUser").focus(function(){ //‡∏ñ‡πâ‡∏≤ focus
 					$(this).select();
 					$(this).attr("autocomplete","off");					
 				});
-				$("#txtPass").focus(function(){  //∂È“ focus
+				$("#txtPass").focus(function(){  //‡∏ñ‡πâ‡∏≤ focus
 					$(this).select();
 					$(this).attr("autocomplete","off");					
 				});				
-				$("#txtUser").focus();	//‚À≈¥‡ √Á® focus ∑’Ëπ’Ë
+				$("#txtUser").focus();	//‡πÇ‡∏´‡∏•‡∏î‡πÄ‡∏™‡∏£‡πá‡∏à focus ‡∏ó‡∏µ‡πà‡∏ô‡∏µ‡πà
 				
-				$("#logout").click(function(){  //∂È“°¥ªÿË¡ logout
+				$("#logout").click(function(){  //‡∏ñ‡πâ‡∏≤‡∏Å‡∏î‡∏õ‡∏∏‡πà‡∏° logout
 						window.location='process-login.php?act=page_logout';
 				});
 				
-				tooltips.tooltip({  //ª‘¥‰«È°ËÕπ
+				tooltips.tooltip({  //‡∏õ‡∏¥‡∏î‡πÑ‡∏ß‡πâ‡∏Å‡πà‡∏≠‡∏ô
 				  disabled: true
 				});		
 				
 				<? 
-				if($_GET['act']=='page_logout'){  //logout ®“°‡æ®Õ◊Ëπ
+				if($_GET['act']=='page_logout'){  //logout ‡∏à‡∏≤‡∏Å‡πÄ‡∏û‡∏à‡∏≠‡∏∑‡πà‡∏ô
 				?>
-					$("#view_dialog p").text("∑”°“√ Logout ‡√’¬∫√ÈÕ¬·≈È«. °¥ªÿË¡ÕÕ°À√◊Õª‘¥‚ª√·°√¡");  //¢ÈÕ§«“¡
+					$("#view_dialog p").text("‡∏ó‡∏≥‡∏Å‡∏≤‡∏£ Logout ‡πÄ‡∏£‡∏µ‡∏¢‡∏ö‡∏£‡πâ‡∏≠‡∏¢‡πÅ‡∏•‡πâ‡∏ß. ‡∏Å‡∏î‡∏õ‡∏∏‡πà‡∏°‡∏≠‡∏≠‡∏Å‡∏´‡∏£‡∏∑‡∏≠‡∏õ‡∏¥‡∏î‡πÇ‡∏õ‡∏£‡πÅ‡∏Å‡∏£‡∏°");  //‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°
 					$( "#view_dialog" ).dialog({		
-																		title: "Logout  ”‡√Á®",
+																		title: "Logout ‡∏™‡∏≥‡πÄ‡∏£‡πá‡∏à",
 																		modal: true,
-																		buttons: {        µ°≈ß: function() {          $( this ).dialog( "close" );      }      },
+																		buttons: {        ‡∏ï‡∏Å‡∏•‡∏á: function() {          $( this ).dialog( "close" );      }      },
 																		show: { effect: "fade", duration: 200 },
 																		position: { my: 'top',at: 'bottom', of: $('.head') },
 																		width: 350,
@@ -48,7 +48,7 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
 
 });
 
-	var tooltips = $(this).tooltip({		//µ—Èß§Ë“ tooltips
+	var tooltips = $(this).tooltip({		//‡∏ï‡∏±‡πâ‡∏á‡∏Ñ‡πà‡∏≤ tooltips
       position: {
         my: "left bottom-10",
         at: "center top",
@@ -63,31 +63,31 @@ $(document).ready(function(){ //‡¡◊ËÕ‚À≈¥‡æÁ®‡ √Á®
       }
     });
 
-function msg_error(title,msg)  // À—« , ¢ÈÕ§«“¡
+function msg_error(title,msg)  // ‡∏´‡∏±‡∏ß , ‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°
 {		
-	$("#view_dialog p").text(msg);  //¢ÈÕ§«“¡
+	$("#view_dialog p").text(msg);  //‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°
 	$( "#view_dialog" ).dialog({		
-														title: title, //À—«
-													  	modal: true,  //‡ß“
-													 	buttons: {        µ°≈ß: function() {          $( this ).dialog( "close" );       }      },  //ªÿË¡ µ°≈ß
-														show: { effect: "fade", duration: 200 },  // ‡Õø‡ø°
-														position: { my: 'top',at: 'bottom', of: $('.head') },  //µ”·ÀπËß
-														width: 350,  //°«È“ß
-														close: function( event, ui ) {  	$("#txtUser").focus();   // ‡Àµÿ°“√≥ÏÀ≈—ß°¥ªÿË¡ª‘¥
-																											 tooltips.tooltip({  	disabled: true		});	  //ª‘¥
+														title: title, //‡∏´‡∏±‡∏ß
+													  	modal: true,  //‡πÄ‡∏á‡∏≤
+													 	buttons: {        ‡∏ï‡∏Å‡∏•‡∏á: function() {          $( this ).dialog( "close" );       }      },  //‡∏õ‡∏∏‡πà‡∏° ‡∏ï‡∏Å‡∏•‡∏á
+														show: { effect: "fade", duration: 200 },  // ‡πÄ‡∏≠‡∏ü‡πÄ‡∏ü‡∏Å
+														position: { my: 'top',at: 'bottom', of: $('.head') },  //‡∏ï‡∏≥‡πÅ‡∏´‡∏ô‡πà‡∏á
+														width: 350,  //‡∏Å‡∏ß‡πâ‡∏≤‡∏á
+														close: function( event, ui ) {  	$("#txtUser").focus();   // ‡πÄ‡∏´‡∏ï‡∏∏‡∏Å‡∏≤‡∏£‡∏ì‡πå‡∏´‡∏•‡∏±‡∏á‡∏Å‡∏î‡∏õ‡∏∏‡πà‡∏°‡∏õ‡∏¥‡∏î
+																											 tooltips.tooltip({  	disabled: true		});	  //‡∏õ‡∏¥‡∏î
 														}
 										});
 //	$("#txtPass").focus();									
 	return false;
 }
 
-function msg_complete(title,msg){	  // À—« , ¢ÈÕ§«“¡
+function msg_complete(title,msg){	  // ‡∏´‡∏±‡∏ß , ‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°
 
-	$("#view_dialog p").text(msg);  //¢ÈÕ§«“¡
+	$("#view_dialog p").text(msg);  //‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°
 	$( "#view_dialog" ).dialog({		
 														title: title,
 													  	modal: true,
-													  	buttons: {        µ°≈ß: function() {          $( this ).dialog( "close" );      }      },
+													  	buttons: {        ‡∏ï‡∏Å‡∏•‡∏á: function() {          $( this ).dialog( "close" );      }      },
 														show: { effect: "fade", duration: 200 },
 														position: { my: 'top',at: 'bottom', of: $('.head') },
 														width: 350,
@@ -98,7 +98,7 @@ function msg_complete(title,msg){	  // À—« , ¢ÈÕ§«“¡
 
 function checkForm(){
 
-	tooltips.tooltip({  	disabled: false		}); //‡ª‘¥
+	tooltips.tooltip({  	disabled: false		}); //‡πÄ‡∏õ‡∏¥‡∏î
 	if($("#txtUser").val()==""){		
 				tooltips.tooltip( "open" );
 				$("#txtUser").focus();																				
@@ -167,18 +167,18 @@ function checkForm(){
 <iframe name='frame' width='1' height='1' id="frame" style='position:absolute;visibility:hidden'></iframe>
 <form action="process-login.php?act=login" method="post" target="frame" id="form1" onsubmit="checkForm(); return false;">
 <div class="area">
-<div class="head">√–∫∫®—¥°“√§≈—ß ‘π§È“∑—≥±Ï∫πœ °√ÿ≥“ Login.</div>
+<div class="head">‡∏£‡∏∞‡∏ö‡∏ö‡∏à‡∏±‡∏î‡∏Å‡∏≤‡∏£‡∏Ñ‡∏•‡∏±‡∏á‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤‡∏ó‡∏±‡∏ì‡∏ë‡πå‡∏ö‡∏ô‡∏Ø ‡∏Å‡∏£‡∏∏‡∏ì‡∏≤ Login.</div>
 <div class="body_white">
 <div class="username">Username :</div>
-<div class="user_input"><? if($_SESSION['session_user']['user_name'] <> "") { echo $_SESSION['session_user']['user_name']; } else  { ?><input type="text" name="txtUser" id="txtUser" title="°√Õ°™◊ËÕºŸÈ„™Èß“π" /> <? } ?></div>
+<div class="user_input"><? if($_SESSION['session_user']['user_name'] <> "") { echo $_SESSION['session_user']['user_name']; } else  { ?><input type="text" name="txtUser" id="txtUser" title="‡∏Å‡∏£‡∏≠‡∏Å‡∏ä‡∏∑‡πà‡∏≠‡∏ú‡∏π‡πâ‡πÉ‡∏ä‡πâ‡∏á‡∏≤‡∏ô" /> <? } ?></div>
 <?  if($_SESSION['session_user']['user_name'] == "") { ?>
 <div class="username">Password : </div>
-<div class="user_input"><input type="password" name="txtPass" id="txtPass" title="°√Õ°√À— ºË“π" /></div>
+<div class="user_input"><input type="password" name="txtPass" id="txtPass" title="‡∏Å‡∏£‡∏≠‡∏Å‡∏£‡∏´‡∏±‡∏™‡∏ú‡πà‡∏≤‡∏ô" /></div>
 <? } ?>
 <div class="btn_login"><?  if($_SESSION['session_user']['user_name'] == "") { ?><input  type="submit"  value=" Login " /> <input type="reset" value=" Cancel " /><? }else{ ?><input type="button" value=" Logout " id="logout" /><? } ?></div>
 <div class="place">
-<div class="txt_place">‡≈◊Õ°∑’Ë∑”°“√</div>
-<div class="botton"><a href="web_factory/page-product1.php"> ”À√—∫‚√ßß“π</a></div><div class="botton"><a href="#"> ”π—°ß“π„À≠Ë</a></div><div class="botton"><a href="#">ÕÕ°</a></div>  <div style="clear:both;"></div>
+<div class="txt_place">‡πÄ‡∏•‡∏∑‡∏≠‡∏Å‡∏ó‡∏µ‡πà‡∏ó‡∏≥‡∏Å‡∏≤‡∏£</div>
+<div class="botton"><a href="web_factory/page-product1.php">‡∏™‡∏≥‡∏´‡∏£‡∏±‡∏ö‡πÇ‡∏£‡∏á‡∏á‡∏≤‡∏ô</a></div><div class="botton"><a href="#">‡∏™‡∏≥‡∏ô‡∏±‡∏Å‡∏á‡∏≤‡∏ô‡πÉ‡∏´‡∏ç‡πà</a></div><div class="botton"><a href="#">‡∏≠‡∏≠‡∏Å</a></div>  <div style="clear:both;"></div>
 </div>
 
 </div>
