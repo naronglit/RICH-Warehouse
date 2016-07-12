@@ -23,7 +23,11 @@ function selectedMenu($pageName){
 						if( array_search( basename($_SERVER['PHP_SELF']) , $pageName) == "0" ){ //ไฮไล เมนู
 								return "  title='selected' ";
 						}else if(array_search( basename($_SERVER['PHP_SELF']) , $pageName) == "1"){ //ไฮไล+แสดงข้อความด้านล่าง
-								return "  title='selected-sub' ";// ใช้ jquery สั่งให้แสดงข้อความต่อจากไฮไล
+								if($_GET['act']=='add') return "  title='selected-sub-add' ";// ใช้ jquery สั่งให้แสดงข้อความต่อจากไฮไล
+								else if($_GET['act']=='view') return "  title='selected-sub-view' ";// ใช้ jquery สั่งให้แสดงข้อความต่อจากไฮไล
+								else if($_GET['act']=='edit') return "  title='selected-sub-edit' ";// ใช้ jquery สั่งให้แสดงข้อความต่อจากไฮไล
+								
+								
 						}
 			}
 }
@@ -59,7 +63,6 @@ function selectedMenu($pageName){
 				
 				//ปุ่มกดเปลี่ยนหน้า
 				$change_page = '<div class="block_page">';
-  				if($Prev_Page<>0){   $change_page .= '<a href="#" onclick="change_page('.$Prev_Page.')">&lt; Prev</a> ';  } //ปุ่ม Prev เมื่อไม่ใช้หน้าแรก
   				$change_page .= 'ไปหน้า <select onchange="change_page(this.value)">';
 						for($p=1;$p<=$Num_Pages;$p++) { 
 						$change_page .= '<option value="'.$p.'"';
@@ -67,7 +70,6 @@ function selectedMenu($pageName){
 						$change_page .= '>'.$p.'</option>';		
 						 } 
 				$change_page .= '</select> จาก '.$Num_Pages.' หน้า' ;		
-				if($Page<$Num_Pages){   $change_page .= ' <a href="#" onclick="change_page('.$Next_Page.')">Next &gt;</a>';  } //ปุ่ม Prev เมื่อไม่ใช้หน้าแรก
 				$change_page .= '</div>';		
 	}
 	
