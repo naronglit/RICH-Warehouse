@@ -101,7 +101,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
   <tr>
     <td align="right">วันที่กำหนดรับ :</td>
     <td><label for="textfield"></label>
-      <input name="textfield" type="text" id="textfield" size="15" /></td>
+      <input name="textfield" type="text" id="textfield" size="15" alt="datepicker" /></td>
     <td align="right">หมายเหตุ :</td>
     <td rowspan="2"><label for="textfield3">
       <textarea name="textarea" id="textarea" cols="35" rows="3"></textarea>

@@ -115,13 +115,13 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
   </tr>
   <tr>
     <td align="right"><label for="product1_id">รหัสสินค้า :</label></td>
-    <td><input name="product1_id" type="text" id="product1_id" autocomplete="off" value="<?=$objResult['product1_id'] ?>" size="15" />
+    <td><input name="product1_id" type="text" id="product1_id" value="<?=$objResult['product1_id'] ?>" size="15" />
       *</td>
   </tr>
   <tr>
     <td align="right"><label for="product1_name">ชื่อสินค้า :</label></td>
     <td>
-      <input name="product1_name" type="text" id="product1_name" autocomplete="off" value="<?=$objResult['product1_name'] ?>" size="25" />
+      <input name="product1_name" type="text" id="product1_name" value="<?=$objResult['product1_name'] ?>" size="25" />
       *</td>
   </tr>
   <tr>
@@ -131,12 +131,12 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
   <tr>
     <td align="right"><label for="wide">ความกว้าง</label>
 :</td>
-    <td><input name="wide" type="text" id="wide" autocomplete="off" value="<?=$objResult['wide'] ?>" size="10" />
+    <td><input name="wide" type="text" id="wide" value="<?=$objResult['wide'] ?>" size="10" />
 *  mm.</td>
   </tr>
   <tr>
     <td align="right"><label for="thick">ความหนา :</label></td>
-    <td><input name="thick" type="text" id="thick" autocomplete="off" value="<?=$objResult['thick'] ?>" size="10" /> 
+    <td><input name="thick" type="text" id="thick" value="<?=$objResult['thick'] ?>" size="10" /> 
       *
       mm.</td>
   </tr>

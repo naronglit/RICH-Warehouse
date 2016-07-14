@@ -1,4 +1,10 @@
-<?	require("../connect.php"); ?>
+<?	require("../connect.php"); 
+		if($_GET["act"]=="view"||$_GET["act"]=="edit"){
+		$strSQL = "SELECT * FROM wh_product3 WHERE id = '".$_GET['id']."'";
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());
+		$objResult = mysql_fetch_array($objQuery); 
+	}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/factory.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -11,10 +17,26 @@
 <script src="../Library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 <script type="text/javascript" src="../Library/reload.js"></script>
 <script type="text/javascript">
+function msg_error(id)
+{
+	alert(id);
+	return false;
+}
+
+function msg_complete(id,page)
+{	
+	alert(id);
+	window.location.href="page-product3.php"+page;
+}
 $(document).ready(function(){ //เมื่อโหลดเพ็จเสร็จ
 				$(".btn_back").click(function(){  //กลับ
-						window.location='page-product3.php';
+						window.location='page-product3.php?page=<?=$_GET['page'] ?>';
 				});
+				$(".btn_edit").click(function(){  //แก้ไข
+						window.location='?act=edit&id=<?=$_GET['id'] ?>&page=<?=$_GET['page'] ?>';
+				});
+				//View ข้อมูล ปิด Input  
+				<? if($_GET["act"]=="view"){ ?>$('#formInput input , #formInput textarea , #formInput select').attr('disabled', true);<? } ?>
 
 });
 </script>
@@ -81,27 +103,28 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
       <div class="view_head"><!-- InstanceBeginEditable name="view_head" -->เพิ่มข้อมูลเหล็กแปรรูป<!-- InstanceEndEditable --></div>
       <div class="view_head2"> <!-- InstanceBeginEditable name="view_head2" -->
         <div class="btn_back">กลับไปหน้าข้อมูล</div>
-        <div class="btn_edit">แก้ไขข้อมูลนี้</div>
+        <?    if($_GET["act"]=="view"){ ?><div class="btn_edit">แก้ไขข้อมูลนี้</div><? } ?>
       <!-- InstanceEndEditable --></div>
       <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->
-        <form id="formInput" name="formInput" method="post" action=""><table width="500" border="0" cellpadding="0" cellspacing="0">
+      <iframe name='frame' width='1' height='1' style='position:absolute;visibility:hidden'></iframe>
+      <form id="formInput" name="formInput" method="post" action="process-product3.php?act=<?=$_GET['act'] ?>&id=<?=$_GET['id'] ?>&page=<?=$_GET['page'] ?>" target="frame"><table width="500" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td align="right">&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">รหัสสินค้า :</td>
-    <td><label for="textfield"></label>
-      <input name="textfield" type="text" id="textfield" size="15" /></td>
+    <td align="right"><label for="product3_id">รหัสสินค้า :</label></td>
+    <td>
+      <input name="product3_id" type="text" id="product3_id" value="<?=$objResult['product3_id'] ?>" size="15" /> *</td>
   </tr>
   <tr>
-    <td align="right">ชื่อสินค้า :</td>
-    <td><label for="textfield2"></label>
-      <input name="textfield2" type="text" id="textfield2" size="25" /></td>
+    <td align="right"><label for="product3_name">ชื่อสินค้า :</label></td>
+    <td>
+      <input name="product3_name" type="text" id="product3_name" value="<?=$objResult['product3_name'] ?>" size="25" /> *</td>
   </tr>
   <tr>
-    <td align="right">ลายละเอียด :</td>
-    <td><textarea cols="30" rows="2"></textarea></td>
+    <td align="right"><label for="detail">ลายละเอียด :</label></td>
+    <td><textarea name="detail" cols="30" rows="3" id="detail"><?=$objResult['detail'] ?></textarea></td>
   </tr>
   <tr>
     <td align="right">&nbsp;</td>
@@ -112,33 +135,53 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">ต่ำสุด(Min) / สูงสุด(Max) :</td>
-    <td><label for="textfield4"></label>
-      <input name="textfield3" type="text" id="textfield4" size="5" /> 
-      กก.
-      / 
-      <label for="textfield5"></label>
-      <input name="textfield4" type="text" id="textfield5" size="5" /> 
-      กก.</td>
+    <td align="right"><label for="weight_min">ต่ำสุด(Min) / สูงสุด(Max) :</label></td>
+    <td><input name="weight_min" type="text" id="weight_min" value="<?=$objResult['weight_min'] ?>" size="5" /> * 
+      
+      <label for="weight_max">กก. / </label>
+      <input name="weight_max" type="text" id="weight_max" value="<?=$objResult['weight_max'] ?>" size="5" /> *  กก.</td>
   </tr>
   <tr>
-    <td align="right">หน่วยนับ :</td>
-    <td><label for="select"></label>
-      <select name="select" id="select">
-        </select></td>
+    <td align="right"><label for="unit">หน่วยนับ :</label></td>
+    <td>
+      <select name="unit" id="unit">
+      <option value="0"> - โปรดเลือก - </option>
+        <?
+		$strSQL = "SELECT * FROM  wh_unit ORDER BY id ASC ";  
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());
+while($objResult2 = mysql_fetch_array($objQuery))	
+		{  	
+		?>
+      <option value="<?=$objResult2["id"]  ?>" <?  if($objResult2["id"] == $objResult['unit']){  ?> selected="selected" <? ;}?>><?=$objResult2["unit_name"]  ?></option>
+        <?
+		}
+		?>
+        </select> *</td>
   </tr>
   <tr>
-    <td align="right">ประเภทสินค้า :</td>
-    <td><select name=""></select></td>
+    <td align="right"><label for="detail">ประเภทสินค้า :</label></td>
+    <td><select name="product_type" id="product_type">
+        <option value="0"> - โปรดเลือก - </option>
+        <?
+		$strSQL = "SELECT * FROM  wh_category ORDER BY id ASC ";  
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());
+while($objResult3 = mysql_fetch_array($objQuery))	
+		{  	
+		?>
+         <option value="<?=$objResult3["id"]  ?>" <?  if($objResult3["id"] == $objResult['product_type']){  ?> selected="selected" <? ;}?>><?=$objResult3["cate_name"]  ?></option>
+        <?
+		}
+		?>     
+    </select> *</td>
   </tr>
   <tr>
     <td align="right">&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td align="right">หมายเหตุ :</td>
-    <td><label for="textarea"></label>
-      <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea></td>
+    <td align="right"><label for="note">หมายเหตุ :</label></td>
+    <td>
+      <textarea name="note" id="note" cols="30" rows="5"><?=$objResult['note'] ?></textarea></td>
   </tr>
   <tr>
     <td align="right">&nbsp;</td>

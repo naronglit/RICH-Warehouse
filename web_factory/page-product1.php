@@ -87,9 +87,9 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
       <iframe name='frame' width='1' height='1' id="frame" style='position:absolute;visibility:hidden'></iframe>      
       <form id="form1" name="form1" method="post" action="">
       <?
-   		$strSQL = "SELECT * FROM  wh_product1 AS p WHERE 1=1";  
+   		$strSQL = "SELECT * FROM  wh_product1 AS p WHERE 1=1 && place_id='".$_SESSION['session_user']['place_id']."'";  
 		
-		page($_GET['page'],'15',$strSQL);				
+		page($_GET['page'],'25',$strSQL);				
 		$n = $Page_Start;
 		$strSQL .= " ORDER BY p.id ASC ".$Page_Sql;		
 		$objQuery  = mysql_query($strSQL) or die(mysql_error());  

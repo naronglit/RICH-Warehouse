@@ -84,7 +84,18 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
         <div class="btn_new">+ เพิ่มใหม่</div>
       <!-- InstanceEndEditable --></div>
       <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->      
+      <iframe name='frame' width='1' height='1' id="frame" style='position:absolute;visibility:hidden'></iframe>      
       <form id="form1" name="form1" method="post" action="">
+      <?
+   		$strSQL = "SELECT p.id , p.product3_id , p.product3_name , p.note , c.cate_name FROM  wh_product3 AS p LEFT JOIN wh_category AS c";  
+		$strSQL .= " ON p.product_type=c.id";  
+		$strSQL .= " WHERE 1=1 && p.place_id='".$_SESSION['session_user']['place_id']."'";  
+				
+		page($_GET['page'],'25',$strSQL);				
+		$n = $Page_Start;
+		$strSQL .= " ORDER BY p.id ASC ".$Page_Sql;		
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());  
+?>
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_tbl">
           <tr>
             <th>ลำดับ</th>
@@ -92,111 +103,21 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
             <th>สินค้า</th>
             <th>ประเภท</th>
             <th>หมายเหตุ</th>
-            <th>
-              <label for="select">ไปหน้า</label>
-              <select name="select" id="select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              จาก 8 หน้า</th>
+            <th><?=$change_page; ?></th>
           </tr>
+          <?
+		while($objResult = mysql_fetch_array($objQuery))	
+		{  	
+?>            
           <tr>
-            <td>1</td>
-            <td>FGC010603010</td>
-            <td>LIGHT LIP CHANNEL 60 x 30 x 10 MM.</td>
-            <td>เหล็กโครงสร้างตัวซี</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
+            <td><?=($n+=1) ?></td>
+            <td><?=$objResult["product3_id"] ?></td>
+            <td><?=$objResult["product3_name"] ?></td>
+            <td><?=$objResult["cate_name"] ?></td>
+            <td><?=$objResult["note"] ?></td>
+            <td><a href="page-product3-form.php?act=view&id=<?=$objResult["id"] ?>&page=<?=$Page ?>" title="ดูข้อมูล"><img src="../Images/view-icon.png" width="23" height="23" /></a><a href="JavaScript:if(confirm('ยืนยันการลบ : <?=$objResult["product3_name"]  ?> \nหรือไม่?')==true){ del('process-product3.php?act=del&id=<?=$objResult["id"] ?>') }" title="ลบ"><img src="../Images/bin-icon.png" width="20" height="23" /></a></td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>FGC010754515</td>
-            <td>LIGHT LIP CHANNEL 75 x 45 x 15 MM.</td>
-            <td>เหล็กโครงสร้างตัวซี</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>FGC011005020</td>
-            <td>LIGHT LIP CHANNEL 100 x 50 x20 MM.</td>
-            <td>เหล็กโครงสร้างตัวซี</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>FGS0102525</td>
-            <td>SQUARE TUBE 25 x 25 MM.</td>
-            <td>ท่อเหล็กทรงกลม</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>FGS0103232</td>
-            <td>SQUARE TUBE 32 x 32 MM.</td>
-            <td>ท่อเหล็กทรงกลม</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>FGS0103838</td>
-            <td>SQUARE TUBE 38 x 38 MM.</td>
-            <td>ท่อเหล็กทรงกลม</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
+<?		} ?>
         </table>
 
       </form>

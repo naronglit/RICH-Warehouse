@@ -84,7 +84,16 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
         <div class="btn_new">+ เพิ่มใหม่</div>
       <!-- InstanceEndEditable --></div>
       <div class="view_data"><!-- InstanceBeginEditable name="view_data" -->      
+      <iframe name='frame' width='1' height='1' id="frame" style='position:absolute;visibility:hidden'></iframe>      
       <form id="form1" name="form1" method="post" action="">
+      <?
+   		$strSQL = "SELECT * FROM  wh_product2 AS p WHERE 1=1 && place_id='".$_SESSION['session_user']['place_id']."'";  
+		
+		page($_GET['page'],'25',$strSQL);				
+		$n = $Page_Start;
+		$strSQL .= " ORDER BY p.id ASC ".$Page_Sql;		
+		$objQuery  = mysql_query($strSQL) or die(mysql_error());  
+?>
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_tbl">
           <tr>
             <th>ลำดับ</th>
@@ -92,111 +101,21 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
             <th>สินค้า</th>
             <th>ขนาด หน้ากว้าง(mm.)</th>
             <th>หมายเหตุ</th>
-            <th>
-              <label for="select">ไปหน้า</label>
-              <select name="select" id="select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              จาก 8 หน้า</th>
+            <th><?=$change_page; ?></th>
           </tr>
+          <?
+		while($objResult = mysql_fetch_array($objQuery))	
+		{  	
+?>  
           <tr>
-            <td>1</td>
-            <td>SLT021100</td>
-            <td>เหล็กสลิต ความกว้าง 211.0 mm.</td>
-            <td>211</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
+            <td><?=($n+=1) ?></td>
+            <td><?=$objResult["product2_id"]  ?></td>
+            <td><?=$objResult["product2_name"]  ?></td>
+            <td><?=$objResult["thick"] ?></td>
+            <td><?=$objResult["note"]  ?></td>
+            <td><a href="page-product2-form.php?act=view&id=<?=$objResult["id"] ?>&page=<?=$Page ?>" title="ดูข้อมูล"><img src="../Images/view-icon.png" width="23" height="23" /></a><a href="JavaScript:if(confirm('ยืนยันการลบ : <?=$objResult["product2_name"]  ?> \nหรือไม่?')==true){ del('process-product2.php?act=del&id=<?=$objResult["id"] ?>') }" title="ลบ"><img src="../Images/bin-icon.png" width="20" height="23" /></a></td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>SLT016800</td>
-            <td>เหล็กสลิต ความกว้าง 168.0 mm.</td>
-            <td>168</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>SLT008700</td>
-            <td>เหล็กสลิต ความกว้าง 87.0 mm.</td>
-            <td>87</td>
-            <td>&nbsp;</td>
-            <td><img src="../Images/view-icon.png" width="23" height="23" /><img src="../Images/bin-icon.png" width="20" height="23" /></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
+<?		} ?>
         </table>
 
       </form>
