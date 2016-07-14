@@ -474,7 +474,7 @@ button.ui-button::-moz-focus-inner {
 	border-right-width: 0;
 	border-left-width: 1px;
 }
-.ui-datepicker-trigger {
+.ui-datepicker-trigger { 
 	cursor: pointer;
 	vertical-align: middle;
 	margin-left: 5px;
@@ -835,9 +835,11 @@ body .ui-tooltip {
 
 /* Component containers
 ----------------------------------*/
-.ui-widget {
-	 font-family: MyCustomFont; 
-	/* [disabled]font-size: 100%; */
+.ui-widget { 
+	/* font-family: MyCustomFont; */
+	font-family:Verdana, Geneva, sans-serif;
+	 font-size: 75%; 
+	 font-weight:bold;
 }
 .ui-widget .ui-widget {
 	/* [disabled]font-size: 1em; */
@@ -846,7 +848,8 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	 font-family: MyCustomFont; 
+	/* font-family: MyCustomFont; */
+	font-family:Verdana, Geneva, sans-serif;
 	 font-size: .9em; 
 }
 .ui-widget-content {
@@ -1229,7 +1232,7 @@ body .ui-tooltip {
 	filter: Alpha(Opacity=30); /* support: IE8 */
 	border-radius: 8px;
 }
-.area .body_white .view_data #form1 #detail_receive_add tr .total_plan {
+/*.area .body_white .view_data #form1 #detail_receive_add tr .total_plan {
 	color: #C93;
 }
 .area .body_white .view_data #form1 table tr td #receive_no {
@@ -1240,4 +1243,4 @@ body .ui-tooltip {
 }
 .area .body_white .view_data #form1 table tr td #picking_no {
 	text-transform: uppercase;
-}
+}*/
