@@ -56,11 +56,51 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
 	  $('input[alt="datepicker"]').datepicker();
 	  //-----------------------------------------------
 	  
+	  //เซต Dialog -----------------------------------------------
+	  $( "#view_dialog" ).dialog({
+			autoOpen: false,
+			minHeight: 400,
+			maxHeight: 850,
+			/*height: 390,
+			width: 700,*/
+			modal: true,	  //พื้น dirlog สีเทา
+			show: {//เมื่อกดเปิด
+							effect: "fade",
+							duration: 200
+						},
+			open: function(event, ui) { $('.ui-widget-overlay').bind('click', function(){ $("#view_dialog").dialog('close'); }); },//ปิดเมื่อ click outside
+			position: { 				my: 'top',at: 'top', of: $('.data')},
+			hide: {//เมื่อกดปิด
+						effect: "fade",
+						duration: 200
+						},						
+			buttons: {//ปุ่มปิด
+							'ปิด/กดESC': function() {
+							$(this).dialog( "close" );	}
+							}
+							
+	});
+	//-----------------------------------------------  
+	  	  	  
+	$( ".btn_supply" ).click(function() {	//คลิกเลือกสินค้าจากคลังฯ
+			$( "#view_dialog" ).dialog( "open" )
+							  .dialog( "option", "height", 500 )
+							  .dialog( "option", "width", 800 )
+							  .dialog( "option", "buttons" ,[]);											
+			$("#view_dialog").css("text-align", "center")
+							.html("<img src='../images/ajax-loader.gif'>");								
+			$.get( "process-receivePlan.php", { act: "products" , ran : Math.random() } )															
+				.done(function( data ) {
+											$("#view_dialog").html(data)
+															  .hide()
+															  .fadeIn("slow");							
+										})		
+			BodyResize();
+	});			
+	  
+	 
 	  					
 });
-
-
-
 function del(str){  // ฟังก์ชันลบของ view data
 	document.getElementById("form1").action=str;
 	document.getElementById("form1").target='frame';
@@ -98,6 +138,12 @@ function change_page(page){	//เปลี่ยนหน้า view data
 	document.getElementById("form1").target='';
 	document.getElementById("form1").submit();
 
+}
+
+function select_supply(str,str_id){  // ฟังก์ชันลบของ view data
+$("#supply").val(str);
+$("#supp_id").val(str_id);
+$( "#view_dialog" ).dialog( "close" );	
 }
 
 
