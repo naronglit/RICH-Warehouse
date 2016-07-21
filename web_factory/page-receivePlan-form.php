@@ -15,8 +15,30 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
 				$(".btn_back").click(function(){  //กลับ
 						window.location='page-receivePlan.php';
 				});
+				
 
-});
+
+});	  
+
+ $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#add_products" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+
+
 </script>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
@@ -109,9 +131,7 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
   </tr>
   <tr>
     <td align="right">บริษัทคู่ค้า :</td>
-    <td><label for="textfield2"></label>
-      <input name="textfield5" type="text" id="textfield2" size="25" /> 
-      <a href="#">เลือก</a></td>
+    <td><input name="supply" type="text" disabled="disabled" id="supply" style="float:left; width:200px;"/> <div class="btn_supply" title="ค้นหา">...</div><input name="supp_id" id="supp_id" type="hidden" id="supply" value="" /></td>
     <td align="right">&nbsp;</td>
   </tr>
   <tr>
@@ -196,6 +216,8 @@ $(document).ready(function(){ //เมื่อโหลดเพ็จเสร
 </table>
 
         </form>
+        <div style="clear:both; height:50px;">&nbsp;</div>
+        <div id="view_dialog" title="ข้อมูลบริษัทคู่ค้า"></div>
       <!-- InstanceEndEditable --></div>
     </div>
   </div>
