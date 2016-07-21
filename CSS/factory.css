@@ -296,3 +296,20 @@ body {
 	border-top-style: dotted;
 	border-top-color: #CCC;
 }
+.area .data .body_white .view_data #formInput table tr td .btn_supply {
+	background-color: #E8E8E8;
+	border: 1px dotted #FFFFFF;
+	font-size: 85%;
+	color: #666666;
+	float: left;
+	padding-right: 5px;
+	padding-left: 5px;
+	cursor: pointer;
+	margin-left:5px;
+	height:20px;
+}
+.area .data .body_white .view_data #formInput table tr td .btn_supply:hover {
+	background-color: #C9C9C9;
+}#view_dialog {
+	cursor: default;
+}
