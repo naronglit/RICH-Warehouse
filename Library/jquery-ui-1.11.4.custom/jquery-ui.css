@@ -493,6 +493,7 @@ button.ui-button::-moz-focus-inner {
 	position: relative;
 }
 .ui-dialog .ui-dialog-title {
+	 font-size:14px;
 	float: left;
 	margin: .1em 0;
 	white-space: nowrap;
@@ -836,8 +837,8 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget { 
-	/* font-family: MyCustomFont; */
-	font-family:Verdana, Geneva, sans-serif;
+	 font-family: MyCustomFont; 
+/*	font-family:Verdana, Geneva, sans-serif;*/
 	 font-size: 75%; 
 	 font-weight:bold;
 }
@@ -848,8 +849,8 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	/* font-family: MyCustomFont; */
-	font-family:Verdana, Geneva, sans-serif;
+	 font-family: MyCustomFont; 
+/*	font-family:Verdana, Geneva, sans-serif;*/
 	 font-size: .9em; 
 }
 .ui-widget-content {
